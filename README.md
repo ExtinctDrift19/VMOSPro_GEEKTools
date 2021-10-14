@@ -18,4 +18,4 @@ More detail, read [detail.md](https://github.com/HuskyDG/VMOSPro_RootXposed_Term
 ## Installation
 
 You just need to download and install **GEEK Tools** into virtual machine of VMOS Pro.
-Open **GEEK Tools** app and it will automatically install VMOSTool
+Open **GEEK Tools** app and it will automatically install [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal)
