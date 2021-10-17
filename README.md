@@ -1,5 +1,5 @@
 # About
-A Terminal Emulator app with various features for modding virtual machine of VMOS Pro
+Another Terminal Emulator app with various features for modding virtual machine of VMOS Pro
 
 
 <img src="https://i.imgur.com/XZQ1cav.png" width="100%"/>
