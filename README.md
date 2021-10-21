@@ -4,6 +4,9 @@
 
 **Another based-TerminalEmulator app with various features for modding virtual machine of VMOS Pro**
 
+*Material design app icon suggest by @ro6kie* 
+
+
 More information read [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal)
 
 Goal: This app makes installing vmostool easier!
