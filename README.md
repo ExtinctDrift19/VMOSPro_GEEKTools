@@ -1,9 +1,14 @@
 # About
-Another Terminal Emulator app with various features for modding virtual machine of VMOS Pro
+
+<img src="https://i.imgur.com/aGDKH2R.png" /> 
+
+Another based-TerminalEmulator app with various features for modding virtual machine of VMOS Pro
 
 More information read [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal)
 
+Goal: This app makes installing vmostool easier!
 
+As I just an C++ beginner, I will make app 100% with UI when i finished C++ programming course, no use Terminal Emulator
 
 ## Installation
 
@@ -11,5 +16,4 @@ Download from [MEGA Link](http://link1s.com/W2GN7)
 
 
 
-You just need to download and install **GEEK Tools** into virtual machine of VMOS Pro.
-Open **GEEK Tools** app and it will automatically install [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal)
+You just need to download and install **GeekTool** into virtual machine of VMOS Pro.
