@@ -12,6 +12,8 @@ As I just an C++ beginner, I will make app 100% with UI when i finished C++ prog
 
 ## Installation
 
+**Under beta: v2.0**
+
 Download from [MEGA Link](http://link1s.com/W2GN7) 
 
 
