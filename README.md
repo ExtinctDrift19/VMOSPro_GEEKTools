@@ -11,8 +11,6 @@ More information read [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_T
 
 Goal: This app makes installing vmostool easier!
 
-***As I just an C++ beginner, I will make app 100% with UI when i finished C++ programming course, no use Terminal Emulator***
-
 ## Installation
 
 **Under beta: v2.0**
