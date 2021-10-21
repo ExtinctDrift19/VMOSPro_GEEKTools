@@ -1,6 +1,6 @@
 # About
 
-<img src="https://i.imgur.com/aGDKH2R.png" /> 
+<img src="https://i.imgur.com/aGDKH2R.png" width="120px"/> 
 
 **Another based-TerminalEmulator app with various features for modding virtual machine of VMOS Pro**
 
