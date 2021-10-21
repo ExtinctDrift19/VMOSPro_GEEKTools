@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="abc_action_bar_home_description">Navigate home</string>
+<string name="abc_action_bar_up_description">Navigate up</string>
+<string name="abc_action_menu_overflow_description">More options</string>
+<string name="abc_action_mode_done">Done</string>
+<string name="abc_activity_chooser_view_see_all">See all</string>
+<string name="abc_activitychooserview_choose_application">Choose an app</string>
+<string name="abc_capital_off">OFF</string>
+<string name="abc_capital_on">ON</string>
+<string name="abc_menu_alt_shortcut_label">Alt+</string>
+<string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+<string name="abc_menu_delete_shortcut_label">delete</string>
+<string name="abc_menu_enter_shortcut_label">enter</string>
+<string name="abc_menu_function_shortcut_label">Function+</string>
+<string name="abc_menu_meta_shortcut_label">Meta+</string>
+<string name="abc_menu_shift_shortcut_label">Shift+</string>
+<string name="abc_menu_space_shortcut_label">space</string>
+<string name="abc_menu_sym_shortcut_label">Sym+</string>
+<string name="abc_prepend_shortcut_label">Menu+</string>
+<string name="abc_search_hint">Search…</string>
+<string name="abc_searchview_description_clear">Clear query</string>
+<string name="abc_searchview_description_query">Search query</string>
+<string name="abc_searchview_description_search">Search</string>
+<string name="abc_searchview_description_submit">Submit query</string>
+<string name="abc_searchview_description_voice">Voice search</string>
+<string name="abc_shareactionprovider_share_with">Share with</string>
+<string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+<string name="abc_toolbar_collapse_description">Collapse</string>
+<string name="activity_shortcut_create">Term shortcut</string>
+<string name="activity_term_here_title">Term here</string>
+<string name="addshortcut_arguments_label">Arguments</string>
+<string name="addshortcut_button_find_command">Find command</string>
+<string name="addshortcut_button_text_icon">Text icon</string>
+<string name="addshortcut_command_hint">command</string>
+<string name="addshortcut_command_window_instructions">Command window requires full path, no arguments. For other commands use Arguments window (ex: cd /sdcard).</string>
+<string name="addshortcut_example_hint">--example=\"a\"</string>
+<string name="addshortcut_make_text_icon">MAKE TEXT ICON</string>
+<string name="addshortcut_navigator_title">SELECT SHORTCUT TARGET</string>
+<string name="addshortcut_shortcut_label">Shortcut label</string>
+<string name="addshortcut_text_icon_instructions" />
+<string name="addshortcut_title">Term shortcut</string>
+<string name="alt_sends_esc">Alt key sends ESC</string>
+<string name="alt_sends_esc_summary_off">Alt key does not send ESC.</string>
+<string name="alt_sends_esc_summary_on">Alt key sends ESC.</string>
+<string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+<string name="application_email">deadboltsx303@gmail.com</string>
+<string name="application_site">https://www.termoneplus.com</string>
+<string name="application_terminal">GeekTool</string>
+<string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+<string name="bottomsheet_action_expand_halfway">Expand halfway</string>
+<string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+<string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+<string name="character_counter_pattern">%1$d/%2$d</string>
+<string name="chip_text">Chip text</string>
+<string name="clear_text_end_icon_content_description">Clear text</string>
+<string name="close_window">Close window</string>
+<string name="colorvalue_icon_text_entry_hint">Enter icon text</string>
+<string name="colorvalue_label_lock_button_column">LOCK</string>
+<string name="colorvalue_letter_alpha">α</string>
+<string name="colorvalue_letter_blue">B</string>
+<string name="colorvalue_letter_green">G</string>
+<string name="colorvalue_letter_red">R</string>
+<string name="confirm_window_close_message">Close this window?</string>
+<string name="control_key_dialog_control_disabled_text">No control key set.</string>
+<string name="control_key_dialog_control_text">"CTRLKEY Space : Control-@ (NUL)
+CTRLKEY A..Z : Control-A..Z
+CTRLKEY 5 : Control-]
+CTRLKEY 6 : Control-^
+CTRLKEY 7 : Control-_
+CTRLKEY 9 : F11
+CTRLKEY 0 : F12"</string>
+<string name="control_key_dialog_fn_disabled_text">No function key set.</string>
+<string name="control_key_dialog_fn_text">"FNKEY 1..9 : F1-F9
+FNKEY 0 : F10
+FNKEY W : Up
+FNKEY A : Left
+FNKEY S : Down
+FNKEY D : Right
+FNKEY P : PageUp
+FNKEY N : PageDown
+FNKEY T : Tab
+FNKEY L : | (pipe)
+FNKEY U : _ (underscore)
+FNKEY E : Control-[ (ESC)
+FNKEY X : Delete
+FNKEY I : Insert
+FNKEY H : Home
+FNKEY F : End
+FNKEY . : Control-\\
+"</string>
+<string name="control_key_dialog_title">Control and Function Keys</string>
+<string name="copy">Copy</string>
+<string name="copy_all">Copy all</string>
+<string name="dialog_title_actionbar_preference">Action bar behavior</string>
+<string name="dialog_title_backaction_preference">Back button behavior</string>
+<string name="dialog_title_color_preference">Text color</string>
+<string name="dialog_title_controlkey_preference">Control key</string>
+<string name="dialog_title_cursorblink_preference">Cursor blink</string>
+<string name="dialog_title_cursorstyle_preference">Cursor style</string>
+<string name="dialog_title_fnkey_preference">Fn key</string>
+<string name="dialog_title_fontsize_preference">Font size</string>
+<string name="dialog_title_ime_preference">Input method</string>
+<string name="dialog_title_initialcommand_preference">Initial Command</string>
+<string name="dialog_title_orientation_preference">Screen orientation behavior</string>
+<string name="dialog_title_shell_preference">Shell</string>
+<string name="dialog_title_shellrc_preference">Shell startup</string>
+<string name="dialog_title_sizecalc_preference">Size calculation method</string>
+<string name="dialog_title_statusbar_preference">Status bar</string>
+<string name="dialog_title_termtype_preference">Terminal type</string>
+<string name="dialog_title_thememode_preference">Theme Mode</string>
+<string name="disable_wakelock">Drop WakeLock</string>
+<string name="disable_wifilock">Drop WifiLock</string>
+<string name="edit_text">Edit text</string>
+<string name="email_transcript_chooser_title">Mail transcript using:</string>
+<string name="email_transcript_no_email_activity_found">Could not choose an email activity to send transcript.</string>
+<string name="email_transcript_subject">Transcript from GeekTool for Android</string>
+<string name="enable_wakelock">Take WakeLock</string>
+<string name="enable_wifilock">Take WifiLock</string>
+<string name="error_icon_content_description">Error</string>
+<string name="expand_button_title">Advanced</string>
+<string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+<string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+<string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+<string name="fsnavigator_change_theme">Change theme</string>
+<string name="fsnavigator_no_external_storage">External storage not available</string>
+<string name="fsnavigator_optional_enter_path">Or enter path here.</string>
+<string name="fsnavigator_title">File selector</string>
+<string name="help">Help</string>
+<string name="help_url">https://termoneplus.com/app/help/index.html</string>
+<string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+<string name="hint_shellrc_preference">(shell startup commands)</string>
+<string name="icon_content_description">Dialog Icon</string>
+<string name="ignore_battery_optimizations">Allow \"%1$s\" to ignore battery optimizations?</string>
+<string name="item_view_role_description">Tab</string>
+<string name="key_home_path_preference">home_path</string>
+<string name="key_shellrc_preference">shrc</string>
+<string name="key_source_sys_shrc_preference">source_sys_shrc</string>
+<string name="keyboard_preferences">Keyboard</string>
+<string name="material_clock_display_divider">:</string>
+<string name="material_clock_toggle_content_description">Select AM or PM</string>
+<string name="material_hour_selection">Select hour</string>
+<string name="material_hour_suffix">"%1$s o'clock"</string>
+<string name="material_minute_selection">Select minutes</string>
+<string name="material_minute_suffix">%1$s minutes</string>
+<string name="material_motion_easing_accelerated">cubic-bezier(0.4, 0.0, 1.0, 1.0)</string>
+<string name="material_motion_easing_decelerated">cubic-bezier(0.0, 0.0, 0.2, 1.0)</string>
+<string name="material_motion_easing_emphasized">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
+<string name="material_motion_easing_linear">cubic-bezier(0.0, 0.0, 1.0, 1.0)</string>
+<string name="material_motion_easing_standard">cubic-bezier(0.4, 0.0, 0.2, 1.0)</string>
+<string name="material_slider_range_end">Range end,</string>
+<string name="material_slider_range_start">Range start,</string>
+<string name="material_timepicker_am">AM</string>
+<string name="material_timepicker_clock_mode_description">Switch to clock mode for the time input.</string>
+<string name="material_timepicker_hour">Hour</string>
+<string name="material_timepicker_minute">Minute</string>
+<string name="material_timepicker_pm">PM</string>
+<string name="material_timepicker_select_time">Select time</string>
+<string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+<string name="message_external_storage_granted">Granted access to \"External Storage\"</string>
+<string name="message_external_storage_not_granted">Denied access to \"External Storage\"</string>
+<string name="message_external_storage_rationale">Access to \"External Storage\" is required to manage its files</string>
+<string name="mtrl_badge_numberless_content_description">New notification</string>
+<string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+<string name="mtrl_exceed_max_badge_number_content_description">More than %1$d new notifications</string>
+<string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+<string name="mtrl_picker_a11y_next_month">Change to next month</string>
+<string name="mtrl_picker_a11y_prev_month">Change to previous month</string>
+<string name="mtrl_picker_announce_current_selection">Current selection: %1$s</string>
+<string name="mtrl_picker_cancel">@android:string/cancel</string>
+<string name="mtrl_picker_confirm">@android:string/ok</string>
+<string name="mtrl_picker_date_header_selected">%1$s</string>
+<string name="mtrl_picker_date_header_title">Select Date</string>
+<string name="mtrl_picker_date_header_unselected">Selected date</string>
+<string name="mtrl_picker_day_of_week_column_header">Column of days: %1$s</string>
+<string name="mtrl_picker_invalid_format">Invalid format.</string>
+<string name="mtrl_picker_invalid_format_example">Example: %1$s</string>
+<string name="mtrl_picker_invalid_format_use">Use: %1$s</string>
+<string name="mtrl_picker_invalid_range">Invalid range.</string>
+<string name="mtrl_picker_navigate_to_year_description">Navigate to year %1$s</string>
+<string name="mtrl_picker_out_of_range">Out of range: %1$s</string>
+<string name="mtrl_picker_range_header_only_end_selected">Start date – %1$s</string>
+<string name="mtrl_picker_range_header_only_start_selected">%1$s – End date</string>
+<string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+<string name="mtrl_picker_range_header_title">Select Range</string>
+<string name="mtrl_picker_range_header_unselected">Start date – End date</string>
+<string name="mtrl_picker_save">Save</string>
+<string name="mtrl_picker_text_input_date_hint">Date</string>
+<string name="mtrl_picker_text_input_date_range_end_hint">End date</string>
+<string name="mtrl_picker_text_input_date_range_start_hint">Start date</string>
+<string name="mtrl_picker_text_input_day_abbr">d</string>
+<string name="mtrl_picker_text_input_month_abbr">m</string>
+<string name="mtrl_picker_text_input_year_abbr">y</string>
+<string name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
+<string name="mtrl_picker_toggle_to_day_selection">Tap to switch to selecting a day</string>
+<string name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
+<string name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
+<string name="navigation_drawer_close">Close navigation drawer</string>
+<string name="navigation_drawer_open">Open navigation drawer</string>
+<string name="new_window">New window</string>
+<string name="next_window">Next window</string>
+<string name="not_set">Not set</string>
+<string name="password_toggle_content_description">Show password</string>
+<string name="paste">Paste</string>
+<string name="paste_script">Paste Script</string>
+<string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+<string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+<string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+<string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+<string name="perm_append_to_path">Add commands to GeekTool</string>
+<string name="perm_prepend_to_path">Override commands in GeekTool</string>
+<string name="perm_run_script">Run arbitrary commands in GeekTool</string>
+<string name="permdesc_append_to_path">Allows application to provide additional commands (add directories to the PATH) for GeekTool for Android.</string>
+<string name="permdesc_prepend_to_path">Allows application to override existing commands with its own versions (prepend directories to the PATH) in GeekTool for Android.</string>
+<string name="permdesc_run_script">"Allows application to open new windows in GeekTool for Android and run commands in those windows with all of GeekTool for Android's permissions, including access to the Internet and your SD Card."</string>
+<string name="pref_backaction_default">2</string>
+<string name="pref_color_default">1</string>
+<string name="pref_controlkey_default">5</string>
+<string name="pref_cursorblink_default">0</string>
+<string name="pref_cursorstyle_default">0</string>
+<string name="pref_fnkey_default">4</string>
+<string name="pref_fontsize_default">10</string>
+<string name="pref_ime_default">0</string>
+<string name="pref_initialcommand_default" />
+<string name="pref_shell_default">/system/bin/sh -c libfake_initial.so</string>
+<string name="pref_statusbar_default">1</string>
+<string name="pref_termtype_default">screen</string>
+<string name="pref_thememode_default">dark</string>
+<string name="preference_copied">\"%1$s\" copied to clipboard.</string>
+<string name="preferences">Preferences</string>
+<string name="prev_window">Prev window</string>
+<string name="process_exit_message">Terminal session finished</string>
+<string name="reset">Reset term</string>
+<string name="reset_toast_notification">"This window's terminal state has been reset."</string>
+<string name="restart_actionbar_change">"Restarting activity ...
+(new action-bar mode)"</string>
+<string name="restart_statusbar_change">"Restarting activity ...
+(new status-bar mode)"</string>
+<string name="restart_thememode_change">"Restarting activity ...
+(new theme mode)"</string>
+<string name="screen_preferences">Screen</string>
+<string name="script_import_error">Cannot read selected script</string>
+<string name="script_source_content_error">No activity found to handle action \"Get Content\"</string>
+<string name="search_menu_title">Search</string>
+<string name="select_text">Select text</string>
+<string name="send_control_key">Send control key</string>
+<string name="send_email">Email to</string>
+<string name="send_fn_key">Send fn key</string>
+<string name="service_notify_text">Terminal session is running</string>
+<string name="shell_preferences">Shell</string>
+<string name="special_keys">Special keys</string>
+<string name="status_bar_notification_info_overflow">999+</string>
+<string name="summary_actionbar_preference">"Choose the action bar's behavior."</string>
+<string name="summary_actionbar_preference_compat">"Choose the action bar's behavior."</string>
+<string name="summary_backaction_preference">Choose what pressing the back button does.</string>
+<string name="summary_close_window_on_process_exit_preference">Whether a window should close when its shell exits.</string>
+<string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+<string name="summary_color_preference">Choose text color.</string>
+<string name="summary_controlkey_preference">Choose control key.</string>
+<string name="summary_cursorblink_preference">Choose cursor blink.</string>
+<string name="summary_cursorstyle_preference">Choose cursor style.</string>
+<string name="summary_fnkey_preference">Choose Fn key.</string>
+<string name="summary_fontsize_preference">Choose character height in points.</string>
+<string name="summary_home_path_preference">Path to a writable folder to be used as HOME.</string>
+<string name="summary_ime_preference">Choose input method for soft keyboard.</string>
+<string name="summary_initialcommand_preference">Sent to the shell when it starts.</string>
+<string name="summary_mouse_tracking_preference">Whether tap and scroll events should be sent as escape sequences to the terminal.</string>
+<string name="summary_orientation_preference">Choose the screen orientation behavior.</string>
+<string name="summary_shell_preference">Specify the shell command line.</string>
+<string name="summary_shellrc_preference">Shell startup commands.</string>
+<string name="summary_sizecalc_preference">When to calculate terminal screen size as work-aroud for old devices or some soft keyboard.</string>
+<string name="summary_source_sys_shrc_preference">In application specific shell statup script source commands from system shell startup file (/system/etc/mkshrc). Depends from shell command line.</string>
+<string name="summary_statusbar_preference">Show/hide status bar.</string>
+<string name="summary_termtype_preference">What terminal type to report to the shell.</string>
+<string name="summary_thememode_preference">Change Theme mode.</string>
+<string name="summary_utf8_by_default_preference">Whether UTF-8 mode is enabled by default.</string>
+<string name="summary_verify_path_preference">Whether inaccessible directories should be removed from the PATH.</string>
+<string name="text_preferences">Text</string>
+<string name="title_actionbar_preference">Action bar</string>
+<string name="title_backaction_preference">Back button behavior</string>
+<string name="title_close_window_on_process_exit_preference">Close window on exit</string>
+<string name="title_color_preference">Colors</string>
+<string name="title_controlkey_preference">Control key</string>
+<string name="title_cursorblink_preference">Cursor blink</string>
+<string name="title_cursorstyle_preference">Cursor style</string>
+<string name="title_fnkey_preference">Fn key</string>
+<string name="title_fontsize_preference">Font size</string>
+<string name="title_home_path_preference">HOME folder</string>
+<string name="title_ime_preference">Input method</string>
+<string name="title_initialcommand_preference">Initial command</string>
+<string name="title_mouse_tracking_preference">Send mouse events</string>
+<string name="title_orientation_preference">Screen orientation</string>
+<string name="title_shell_preference">Command line</string>
+<string name="title_shellrc_preference">Shell startup</string>
+<string name="title_sizecalc_preference">Size calculation</string>
+<string name="title_source_sys_shrc_preference">Source system mkshrc</string>
+<string name="title_statusbar_preference">Status bar</string>
+<string name="title_termtype_preference">Terminal type</string>
+<string name="title_thememode_preference">Theme Mode</string>
+<string name="title_use_keyboard_shortcuts">Use Keyboard Shortcuts</string>
+<string name="title_utf8_by_default_preference">Default to UTF-8</string>
+<string name="title_verify_path_preference">Verify PATH entries</string>
+<string name="toggle_soft_keyboard">Toggle soft keyboard</string>
+<string name="use_keyboard_shortcuts_summary_off">Keyboard shortcuts disabled.</string>
+<string name="use_keyboard_shortcuts_summary_on">Ctrl-Tab: cycle window, Ctrl-Shift-N: new window, Ctrl-Shift-V: paste.</string>
+<string name="v7_preference_off">OFF</string>
+<string name="v7_preference_on">ON</string>
+<string name="window_list">Windows</string>
+<string name="window_title">Window %1$d</string>
+</resources>

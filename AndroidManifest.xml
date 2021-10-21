@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="auto" android:sharedUserId="com.github.huskydg.vmostool" android:versionCode="200000" android:versionName="2.0" package="com.github.huskydg.vmostool" platformBuildVersionCode="30" platformBuildVersionName="11">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="30" />
+	<uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<permission android:description="@string/permdesc_run_script" android:label="@string/perm_run_script" android:name="com.termoneplus.permission.RUN_SCRIPT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="dangerous" />
+	<permission android:description="@string/permdesc_append_to_path" android:label="@string/perm_append_to_path" android:name="com.termoneplus.permission.APPEND_TO_PATH" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signature" />
+	<permission android:description="@string/permdesc_prepend_to_path" android:label="@string/perm_prepend_to_path" android:name="com.termoneplus.permission.PREPEND_TO_PATH" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signature" />
+	<application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/application_terminal" android:name="com.termoneplus.Application" android:resizeableActivity="true" android:roundIcon="@mipmap/ic_launcher_round" android:theme="@style/AppTheme.NoActionBar">
+		<activity android:configChanges="density|keyboard|keyboardHidden|layoutDirection|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:launchMode="singleTask" android:name="com.termoneplus.TermActivity" android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RemoteInterface">
+			<intent-filter>
+				<action android:name="com.termoneplus.OPEN_NEW_WINDOW" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity-alias android:exported="true" android:label="@string/activity_term_here_title" android:name="com.termoneplus.TermHere" android:targetActivity="jackpal.androidterm.RemoteInterface">
+			<intent-filter>
+				<action android:name="android.intent.action.SEND" />
+				<data android:mimeType="*/*" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity-alias>
+		<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RunScript" android:permission="com.termoneplus.permission.RUN_SCRIPT">
+			<intent-filter>
+				<action android:name="com.termoneplus.RUN_SCRIPT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:excludeFromRecents="true" android:name="jackpal.androidterm.RunShortcut">
+			<intent-filter>
+				<action android:name="com.termoneplus.RUN_SHORTCUT" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<service android:name="jackpal.androidterm.TermService">
+			<intent-filter>
+				<action android:name="jackpal.androidterm.action.START_TERM.v1" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</service>
+		<activity android:label="@string/window_list" android:name="com.termoneplus.WindowListActivity" android:parentActivityName="com.termoneplus.TermActivity">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.termoneplus.TermActivity" />
+		</activity>
+		<activity android:label="@string/preferences" android:name="com.termoneplus.TermPreferencesActivity" android:parentActivityName="com.termoneplus.TermActivity" android:theme="@style/AppTheme">
+			<meta-data android:name="android.support.PARENT_ACTIVITY" android:value="com.termoneplus.TermActivity" />
+		</activity>
+		<activity android:configChanges="keyboard|keyboardHidden|orientation" android:label="@string/activity_shortcut_create" android:launchMode="singleTop" android:name="com.termoneplus.shortcuts.AddShortcut" android:theme="@style/AppTheme.NoActionBar.Translucent">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.CREATE_SHORTCUT" />
+			</intent-filter>
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="text/*" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:exported="true" android:label="@string/fsnavigator_title" android:launchMode="singleTop" android:name="com.termoneplus.shortcuts.FileSelection">
+			<intent-filter>
+				<action android:name="android.intent.action.PICK" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PICK" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.GET_CONTENT" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.OPENABLE" />
+				<data android:mimeType="*/*" />
+			</intent-filter>
+		</activity>
+		<meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
+		<meta-data android:name="android.max_aspect" android:value="2.4" />
+		<meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="true" />
+	</application>
+</manifest>
