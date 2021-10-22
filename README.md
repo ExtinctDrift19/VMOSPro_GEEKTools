@@ -13,7 +13,6 @@ Goal: This app makes installing vmostool easier!
 
 ## Installation
 
-**Under beta: v2.0**
 
 Download from [MEGA Link](http://link1s.com/W2GN7) 
 
