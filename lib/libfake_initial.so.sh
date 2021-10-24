@@ -5,8 +5,8 @@ priv_dir=/data/data/com.github.huskydg.vmostool
 
 
 
-TOOLVERAPP=2.0
-TOOLVERCODEAPP=20000
+TOOLVERAPP=2.0.1
+TOOLVERCODEAPP=20001
 
 p(){
 COLOR=$1;TEXT="$2";escape="$1"
@@ -153,8 +153,8 @@ elif [ "$option" == "3" ]; then
     /system/bin/sh -
 elif [ "$option" == "4" ]; then
     cd /; clear
-    [ -f "/tool_files/main/exbin/rish" ] || abortc red "Shizuku is not running!"
-    /tool_files/main/exbin/rish || abortc red "Shizuku is not running!"
+    [ -f "/tool_files/binary/rish" ] || abortc red "Shizuku is not running!"
+    /tool_files/binary/rish || abortc red "Shizuku is not running!"
  elif [ "$option" == "5" ]; then
 clear
 pd gray "=============================================="
