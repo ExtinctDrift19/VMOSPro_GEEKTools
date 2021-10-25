@@ -5,8 +5,8 @@ priv_dir=/data/data/com.github.huskydg.vmostool
 
 
 
-TOOLVERAPP=2.0.1
-TOOLVERCODEAPP=20001
+TOOLVERAPP=2.0.2
+TOOLVERCODEAPP=20002
 
 p(){
 COLOR=$1;TEXT="$2";escape="$1"
@@ -139,15 +139,15 @@ echo "   3 - Terminal Emulator"
 echo "   4 - Terminal Emulator (Shizuku access)"
 echo "   5 - Settings"
 echo "   6 - Soft reboot"
-echo "   x - Completely uninstall"
-[ "$TOOLVERCODE" -lt "$TOOLVERCODEAPP" ] && echo "   @ - Update to $TOOLVERAPP"
-echo "   0 - Close app"
+pd red "   x - Remove GeekTool"
+[ "$TOOLVERCODE" -lt "$TOOLVERCODEAPP" ] && pd purple "   @ - Update to $TOOLVERAPP"
+pd orange "   0 - Close app"
 p none "[CHOICE]: "
 read option
 if [ "$option" == "1" ]; then
-    sh /sbin/tool
+    /tool_files/binary/tool
 elif [ "$option" == "2" ]; then
-    sudo /sbin/tool
+    sudo /tool_files/binary/tool
 elif [ "$option" == "3" ]; then
     cd /; clear;
     /system/bin/sh -
@@ -186,25 +186,52 @@ pd gray "=============================================="
 
     setprop ctl.restart zygote
  elif [ "$option" == "x" ]; then
-    echo "ROOT and other functions may be unavailable after that"
-    echo "Remove GEEKTools away? <yes/no>"
+    clear
+    if [ -f "/sbin/daemonsu" ]; then
+        pd yellow "DETECT SU SBIN MODE"
+        echo "GeekTool detect that you have su at \"/sbin\""
+        echo "SU will not work after uninstalling GeekTool"
+        echo "Before uninstalling, GeekTool will:"
+        echo "  Move to \"/system/xbin\" to keep su working"
+        SUPATH=/sbin/daemonsu
+    elif [ -f "/tool_files/binary/daemonsu" ]; then
+        pd yellow "DETECT SUHIDE MODE"
+        echo "GeekTool detect that you have su not in regularly path"
+        echo "Uninstall GeekTool will delete su binary"
+        echo "Before uninstalling, GeekTool will:"
+        echo " Move to \"/system/xbin\" to keep su working"
+        SUPATH=/tool_files/binary/daemonsu
+    fi
+        echo "Some functions may not available after uninstalling"
+echo ""
+    echo "  1 - Full Uninstallation"
+    echo "  2 - Restore stock boot init"
     p none "[CHOICE]: "
     read uninstall
-    if [ "$uninstall" == "yes" ]; then
+    if [ "$uninstall" == "1" -o "$uninstall" == "2" ]; then
     clear; 
     pd gray "=============================================="
     echo "  FLASHING..."
     pd gray "=============================================="
     ( [ -f "/init.real" ] || abort "! Cannot find backup stock boot init"
+if [ "$SUPATH" ]; then
+echo "- Keep su binary working..."
+cp $SUPATH /system_root/system/xbin/daemonsu
+( cd /system_root/system/xbin
+ln -s daemonsu su
+ln -s daemonsu sx )
+fi
 echo "- Restore stock boot init..."
 rm -rf /init
 mv -f /init.real /init
 chmod 777 /init
+if [ "$uninstall" == "1" ]; then
 echo "- Remove tool files..."
 rm -rf /tool_files
 rm -rf /sbin/tool
+fi
 cp /init.rc.orig /init.rc
-echo "- Uninstall done!" )
+echo "- Done!" ) 2>/dev/null
     sleep 2
     exit
     fi
