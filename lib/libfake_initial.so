@@ -5,8 +5,8 @@ priv_dir=/data/data/com.github.huskydg.vmostool
 
 
 
-TOOLVERAPP=2.0.2
-TOOLVERCODEAPP=20002
+TOOLVERAPP=2.1
+TOOLVERCODEAPP=20100
 
 p(){
 COLOR=$1;TEXT="$2";escape="$1"
@@ -31,6 +31,26 @@ code="\033[${escape}m"
 end_code="\033[0m"
 echo -n "$code$TEXT$end_code"
 }
+
+random(){
+VALUE=$1; TYPE=$2; PICK="$3"; PICKC="$4"
+TMPR=""
+HEX="0123456789abcdef"; HEXC=16
+CHAR="qwertyuiopasdfghjklzxcvbnm"; CHARC=26
+NUM="0123456789"; NUMC=10
+COUNT=$(seq 1 1 $VALUE)
+list_pick=$HEX; C=$HEXC
+[ "$TYPE" == "char" ] &&  list_pick=$CHAR && C=$CHARC 
+[ "$TYPE" == "number" ] && list_pick=$NUM && C=$NUMC 
+[ "$TYPE" == "custom" ] && list_pick="$PICK" && C=$PICKC 
+      for i in $COUNT; do
+          random_pick=$(( $RANDOM % $C))
+          echo -n ${list_pick:$random_pick:1}
+      done
+
+}
+
+
 
 md5code_get(){
 FILE=$1
@@ -87,7 +107,7 @@ SUBIN=`which su` || SUBIN=`which daemonsu`
 fi
 }
 
-[ "$VMOS_SYS_NUM" ] || abortc light_red "This program is used for VMOS Pro only"
+[ "$(getprop | grep '\[vmprop.' )" ] || abortc light_red "This program is used for VMOS Pro only"
 
 grep_prop() {
   local REGEX="s/^$1=//p"
@@ -97,6 +117,25 @@ grep_prop() {
   cat $FILES 2>/dev/null | dos2unix | sed -n "$REGEX" | head -n 1
 }
 
+
+install_geektool(){
+clear
+
+(  pd gray "=============================================="
+    echo "  FLASHING..."
+    pd gray "=============================================="
+  echo "Checking environment..."
+  UNDEC=`random 120`
+  ENC64=`echo "$UNDEC" | base64`
+  TESTDEC=`echo "$ENC64" | base64 -d`
+  [ "$TESTDEC" == "$UNDEC" ] || abortc light_red "Sorry, the system is not supported or the environment is broken :("
+  sleep 1
+  echo "Flashing new boot init..."
+  [ -f "lib/libfake_tool.so" ] && sh lib/libfake_tool.so || abortc light_red "Installation failed! This program might not be supported!"
+  ERR=$?;
+  [ "$ERR" == "0" ] && pd light_green "Installation done!" || abortc light_red "Installation failed!"
+  read )
+}
 
 main(){
 my_name=`grep_prop USER_NAME /data/system/term.prop`
@@ -237,16 +276,7 @@ echo "- Done!" ) 2>/dev/null
     fi
     
  elif [ "$option" == "@" ]; then
-    clear; 
-    pd gray "=============================================="
-    echo "  FLASHING..."
-    pd gray "=============================================="
-    echo "Now initializating..."
-    echo "Flashing new boot init..."
-    sh lib/libfake_tool.so
-    ERR=$?;
-  [ "$ERR" == "0" ] && pd light_green "Installation done!" || abortc light_red "Installation failed!"
-    read
+    install_geektool
  elif [ "$option" == "0" ]; then
    exit
 fi
@@ -265,17 +295,7 @@ echo "   0 - Close app"
 p none "[CHOICE]: "
 read option
 if [ "$option" == "1" ]; then
-clear
-
-  pd gray "=============================================="
-    echo "  FLASHING..."
-    pd gray "=============================================="
-  echo "Now initializating..."
-  echo "Flashing new boot init..."
-  [ -f "lib/libfake_tool.so" ] && sh lib/libfake_tool.so || abortc light_red "Installation failed! This program might not be supported!"
-  ERR=$?;
-  [ "$ERR" == "0" ] && pd light_green "Installation done!" || abortc light_red "Installation failed!"
-  read
+   install_geektool
 elif [ "$option" == "2" ]; then
    cd /; clear;
    /system/bin/sh -
@@ -292,11 +312,7 @@ ln -s "$(which $1)" "lib/$1" 2>/dev/null
 
 
 cd $priv_dir || abortc light_red "Something wrong? Please re-install the app!"
-echo ". /system/etc/mkshrc
-test -f ~/.shrc && . ~/.shrc
-. /proc/self/fd/0 <<EOF
-\$(/data/data/com.github.huskydg.vmostool/lib/libexec-t1plus.so aliases)
-EOF" >etc/mkshrc
+
 mkdir lib 2>/dev/null
 link libexec-t1plus.so
 link libexeo-t1plus.so
