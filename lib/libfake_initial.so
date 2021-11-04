@@ -189,9 +189,11 @@ elif [ "$option" == "2" ]; then
     sudo /tool_files/binary/tool
 elif [ "$option" == "3" ]; then
     cd /; clear;
+    export PATH+=:/data/data/com.github.huskydg.vmostool/lib
     /system/bin/sh -
 elif [ "$option" == "4" ]; then
     cd /; clear
+    export PATH+=:/data/data/com.github.huskydg.vmostool/lib
     [ -f "/tool_files/binary/rish" ] || abortc red "Shizuku is not running!"
     /tool_files/binary/rish || abortc red "Shizuku is not running!"
  elif [ "$option" == "5" ]; then
@@ -298,6 +300,7 @@ if [ "$option" == "1" ]; then
    install_geektool
 elif [ "$option" == "2" ]; then
    cd /; clear;
+   export PATH+=:/data/data/com.github.huskydg.vmostool/lib
    /system/bin/sh -
 elif [ "$option" == "3" ]; then
    setprop ctl.restart zygote
@@ -321,7 +324,6 @@ if [ ! -f "lib/libfake_tool.so" ]; then
 rm -rf "lib/libfake_tool.so" 2>/dev/null
 link libfake_tool.so
 fi
-export PATH+=:/tool_files/main/exbin
 rm -rf files/opt/*.dex 2>/dev/null
 if [ ! "$huskydg" == "true" ]; then
   while true; do main_noinit; done;
