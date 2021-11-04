@@ -7,7 +7,7 @@
 *Material design app icon suggest by @ro6kie* 
 
 
-More information read [VMOSTool](https://github.com/HuskyDG/VMOSPro_RootXposed_Terminal)
+More information read [VMOSTool](https://huskydg.github.io/vmos/geektool)
 
 Goal: This app makes installing vmostool easier!
 
