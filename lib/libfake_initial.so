@@ -5,8 +5,8 @@ priv_dir=/data/data/com.github.huskydg.vmostool
 
 
 
-TOOLVERAPP=2.2.1
-TOOLVERCODEAPP=20201
+TOOLVERAPP=2.2.2
+TOOLVERCODEAPP=20202
 
 p(){
 COLOR=$1;TEXT="$2";escape="$1"
@@ -232,16 +232,12 @@ pd gray "=============================================="
         pd yellow "DETECT SU SBIN MODE"
         echo "GeekTool detect that you have su at \"/sbin\""
         echo "SU will not work after uninstalling GeekTool"
-        echo "Before uninstalling, GeekTool will:"
-        echo "  Move to \"/system/xbin\" to keep su working"
-        SUPATH=/sbin/daemonsu
+        
     elif [ -f "/tool_files/binary/daemonsu" ]; then
-        pd yellow "DETECT SUHIDE MODE"
+        pd yellow "DETECT SU DEV MODE"
         echo "GeekTool detect that you have su not in regularly path"
         echo "Uninstall GeekTool will delete su binary"
-        echo "Before uninstalling, GeekTool will:"
-        echo " Move to \"/system/xbin\" to keep su working"
-        SUPATH=/tool_files/binary/daemonsu
+        
     fi
         echo "Some functions may not available after uninstalling"
 echo ""
@@ -256,12 +252,6 @@ echo ""
     pd gray "=============================================="
     ( [ -f "/init.real" ] || abort "! Cannot find backup stock boot init"
 if [ "$SUPATH" ]; then
-echo "- Keep su binary working..."
-cp $SUPATH /system_root/system/xbin/daemonsu
-( cd /system_root/system/xbin
-ln -s daemonsu su
-ln -s daemonsu sx )
-fi
 echo "- Restore stock boot init..."
 rm -rf /init
 mv -f /init.real /init
