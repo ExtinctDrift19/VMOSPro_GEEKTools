@@ -5,8 +5,8 @@ priv_dir=/data/data/com.github.huskydg.vmostool
 
 
 
-TOOLVERAPP=2.2.2
-TOOLVERCODEAPP=20202
+TOOLVERAPP=2.3
+TOOLVERCODEAPP=20300
 
 p(){
 COLOR=$1;TEXT="$2";escape="$1"
@@ -251,7 +251,6 @@ echo ""
     echo "  FLASHING..."
     pd gray "=============================================="
     ( [ -f "/init.real" ] || abort "! Cannot find backup stock boot init"
-if [ "$SUPATH" ]; then
 echo "- Restore stock boot init..."
 rm -rf /init
 mv -f /init.real /init
@@ -263,9 +262,9 @@ rm -rf /sbin/tool
 fi
 cp /init.rc.orig /init.rc
 echo "- Done!" ) 2>/dev/null
-    sleep 2
-    exit
-    fi
+    
+    fi 
+read
     
  elif [ "$option" == "@" ]; then
     install_geektool
