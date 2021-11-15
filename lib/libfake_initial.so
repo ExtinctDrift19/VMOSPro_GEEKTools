@@ -316,8 +316,7 @@ link libfake_tool.so
 mod_prop version "$TOOLVERCODEAPP" ./geektool.prop 2>/dev/null
 fi
 
-
-
+[ -f "lib/libfake_tool.so" ] || link libfake_tool.so
 
 rm -rf files/opt/*.dex 2>/dev/null
 if [ ! "$huskydg" == "true" ]; then
